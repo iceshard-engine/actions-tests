@@ -1,0 +1,11 @@
+name: C/C++ CI
+
+on: [push]
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Search for VsWhere
+      run: C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe -h
