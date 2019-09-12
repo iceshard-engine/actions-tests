@@ -8,4 +8,4 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Search for VsWhere
-      run: C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe -h
+      run: "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe" -h
