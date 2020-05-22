@@ -13,8 +13,8 @@ jobs:
       uses: Ilshidur/action-discord@master
       with:
         args: |
-          'A new commits have been pushed to `{{ EVENT_PAYLOAD.repository.full_name }}`!'
-          'Messages: {{ EVENT_PAYLOAD.commits.map(e => e.message).join('\n') }}'
+          New commits have been pushed to `{{ EVENT_PAYLOAD.repository.full_name }}`!
+          * {{ EVENT_PAYLOAD.commits.map(e => e.message).join('\n') }}
   notify-commit-detailed:
     runs-on: ubuntu-latest
     steps:
