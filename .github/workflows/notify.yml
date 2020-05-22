@@ -14,4 +14,4 @@ jobs:
       with:
         args: |
           New commits have been pushed to `{{ EVENT_PAYLOAD.repository.full_name }}`!
-          * {{ EVENT_PAYLOAD.commits.map(e => 'Commit `' + e.sha + '` ' + e.message + ' by ' + e.author.name + ' (' + e.url + ')').join('\n') }}
+          * {{ EVENT_PAYLOAD.commits.map(e => 'Commit `' + e.sha256 + ' | ' + e.sha128 + '` ' + e.message + ' by ' + e.author.name + ' (' + e.url + ')').join('\n') }}
