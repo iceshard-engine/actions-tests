@@ -14,7 +14,7 @@ jobs:
       with:
         args: |
           'A new commits have been pushed to `{{ EVENT_PAYLOAD.repository.full_name }}`!'
-          'Messages: ${{ join(EVENT_PAYLOAD.commits.*.message, '\n') }}'
+          'Messages: {{ join(EVENT_PAYLOAD.commits.*.message, '\n') }}'
   notify-commit-detailed:
     runs-on: ubuntu-latest
     steps:
