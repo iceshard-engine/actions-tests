@@ -9,8 +9,7 @@ jobs:
   notify-commit:
     runs-on: ubuntu-latest
     steps:
-    - if: github.event == 'push'
-      name: Notify commit (Discord)
+    - name: Notify commit (Discord)
       uses: Ilshidur/action-discord@master
       env:
         DISCORD_USERNAME: Yuki @ Testing
