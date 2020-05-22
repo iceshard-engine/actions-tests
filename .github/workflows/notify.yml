@@ -12,7 +12,9 @@ jobs:
     - name: Notify commit (Discord)
       uses: Ilshidur/action-discord@master
       with:
-        args: 'A new commit has been pushed to {{ EVENT_PAYLOAD.repository.full_name }}!'
+        args: >
+          | 'A new commit has been pushed to `{{ EVENT_PAYLOAD.repository.full_name }}`!'
+          | '{{ EVENT_PAYLOAD.commits }}'
   notify-commit-detailed:
     runs-on: ubuntu-latest
     steps:
