@@ -9,8 +9,11 @@ jobs:
   notify-commit:
     runs-on: ubuntu-latest
     steps:
-    - name: Notify commit (Discord)
+    - if: github.event == 'push'
+      name: Notify commit (Discord)
       uses: Ilshidur/action-discord@master
+      env:
+        DISCORD_USERNAME: Yuki @ Testing
       with:
         args: |
           New commits have been pushed to `{{ EVENT_PAYLOAD.repository.full_name }}`!
