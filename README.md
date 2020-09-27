@@ -2,3 +2,4 @@
 Test repository for GitHub actions
 
 # Testing signing with new GPG key and user mail
+Final updated key
